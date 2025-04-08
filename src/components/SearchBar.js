@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SearchBar = ({ onSearch }) => {
-  const [city, setCity] = useState('');
-
+const SearchBar = ({ value, onChange, onSearch, theme }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (city.trim()) {
-      onSearch(city);
+    if (value.trim()) {
+      onSearch(value);
     }
-    setCity('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex mb-4">
-      <input
-        type="text"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city name"
-        className="flex-grow px-4 py-2 border rounded-l-md focus:outline-none"
-      />
-      <button
-        type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600"
+    <form onSubmit={handleSubmit} className="flex flex-col items-center mb-6">
+      <label
+        htmlFor="city"
+        className={`mb-2 text-lg font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
+          }`}
       >
-        Search
-      </button>
+        Your city
+      </label>
+      <input
+        id="city"
+        type="text"
+        value={value}
+        onChange={onChange}
+        placeholder="e.g. London"
+        className={`border rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-300 w-64 text-center transition-colors duration-200 ${theme === 'dark'
+            ? 'bg-gray-700 border-gray-600 text-gray-200 placeholder-gray-400'
+            : 'bg-white border-gray-300 text-gray-800 placeholder-gray-500'
+          }`}
+      />
     </form>
   );
 };

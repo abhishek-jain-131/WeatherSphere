@@ -1,18 +1,23 @@
-// components/SearchHistory.js
 import React from 'react';
 
-const SearchHistory = ({ history, onSelect }) => {
+const SearchHistory = ({ history, onSelect, theme }) => {
   if (history.length === 0) return null;
 
   return (
-    <div className="mb-4">
-      <h3 className="text-lg font-medium mb-2">Recent Searches:</h3>
-      <div className="flex flex-wrap gap-2">
+    <div className="mb-4 text-center">
+      <h3 className={`text-lg font-medium ${theme === 'dark' ? 'text-blue-300' : 'text-blue-700'
+        }`}>
+        Recent Searches:
+      </h3>
+      <div className="flex flex-wrap justify-center gap-2">
         {history.map((city, index) => (
           <button
             key={index}
             onClick={() => onSelect(city)}
-            className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+            className={`px-3 py-1 rounded transition-colors duration-200 ${theme === 'dark'
+                ? 'bg-blue-700 hover:bg-blue-600 text-blue-100'
+                : 'bg-blue-200 hover:bg-blue-300 text-blue-800'
+              }`}
           >
             {city}
           </button>
