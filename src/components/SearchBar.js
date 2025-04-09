@@ -3,13 +3,13 @@ import React from 'react';
 const SearchBar = ({ value, onChange, onSearch, theme }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (value.trim()) {
+    if (value.trim() && typeof onSearch === 'function') {
       onSearch(value);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center mb-6">
+    <form onSubmit={handleSubmit} className="flex flex-col items-center mb-6" role="search">
       <label
         htmlFor="city"
         className={`mb-2 text-lg font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
