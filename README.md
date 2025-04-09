@@ -2,7 +2,7 @@
 
 A responsive weather application providing real-time weather data and 5-day forecasts with an intuitive UI and dark/light mode toggle.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://abhishek-jain-131.github.io/WeatherSphere/)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://weather-sphere-dusky.vercel.app/)
 [![React](https://img.shields.io/badge/react-19.1.0-blue)](https://react.dev/)
 
 ## Features
