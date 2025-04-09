@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WeatherSphere/static/css/main.29cd48c0.css",
+    "main.js": "/WeatherSphere/static/js/main.c110f18e.js",
+    "index.html": "/WeatherSphere/index.html",
+    "main.29cd48c0.css.map": "/WeatherSphere/static/css/main.29cd48c0.css.map",
+    "main.c110f18e.js.map": "/WeatherSphere/static/js/main.c110f18e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29cd48c0.css",
+    "static/js/main.c110f18e.js"
+  ]
+}
