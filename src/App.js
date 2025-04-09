@@ -6,6 +6,8 @@ import Forecast from './components/Forecast';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
 import Cached from '@mui/icons-material/Cached';
+window.isNumber = (value) => typeof value === 'number' && isFinite(value);
+
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
